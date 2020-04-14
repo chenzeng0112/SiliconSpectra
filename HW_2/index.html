@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+            <!-- Header-->
+        <header class="header">
+            <div class="headerList">
+                <img src="./movieDB.jpg" id="image" alt="MovieDB">
+                <h3 class="headerList" onclick="movieListShow()" id="headerList">Movie List</h3>
+                <h3 class="likedList" id="likeList" onclick="likeListShow()">Likes</h3>
+                <a id="likeTotal"></a>
+            </div>
+            <!-- <a class="config">CONFIG</a> -->
+        </header>
+        
+        <!-- Page display -->
+        <div id="pageDisplay">
+            <div class="pageCount">
+                <button onclick="prev()" id="pagePrevious">Previous</button>
+                <span id="total"></span>
+                <button onclick="next()" id="pageNext">Next</button>
+            </div>
+        </div>
+        <div id="container"></div>
+    </div>
+
+    <!-- Detail page -->
+    <div id="popUp">
+        <div id="popUpBlock">
+            <div id="popUpImg"></div>
+            <div id="content"></div>
+        </div>   
+    </div>
+
+    <!-- Liked page -->
+    <div id = "liked">
+        <h1 class="h1">Liked List</h1>
+        <div id="listContainer"></div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

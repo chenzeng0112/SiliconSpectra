@@ -1,0 +1,200 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-style: none none solid none;
+    border-color: lightgray;
+    margin: 10px 100px;
+}
+
+.headerList {
+    display: flex;
+    margin: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.config {
+    display: flex;
+    margin: 20px;
+}
+
+#image{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.pageDisplay {
+  display: flex;
+}
+
+.pageCount {
+    text-align: center;
+    align-items: center;
+    margin: 10px auto;
+    /* display: flex;
+    justify-content: space-around; */
+}
+
+.pageCount > span {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.pageCount > button {
+    width: 120px;
+    height: 40px;
+    font-size: larger;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    margin: 20px;
+}
+
+#pagePrevious {
+    margin-right: 110px;
+}
+
+#pageNext {
+    margin-left: 115px;
+}
+
+#total {
+
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 7%;
+}
+
+#container > div {
+    width: 17%;
+    text-align: center;
+}
+
+.img {
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+    height: 20px;
+    overflow: scroll;
+}
+
+.releaseDate {
+    margin: 5px 0px;
+}
+
+.movieDetails {
+
+}
+
+#popUpBlock {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    background-color: black;
+    position: fixed;
+    flex-wrap: wrap;
+    width: 60%;
+    z-index: 999;
+    height: auto;
+    top: 12%;
+    left: 18%;
+}
+.popImage {
+    width: 300px;
+    height: auto;
+    margin: 30px;
+}
+
+#content {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-around;
+}
+
+#content > h2 {
+    font-weight: bold;
+    font-family: font-family: 'Courier New', Courier, monospace;;
+}
+
+#content > p {
+    display: flexbox;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#genres {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+#genres > li{
+    text-align: center;
+    padding: 5px;
+    border-radius: 15px;
+    list-style-type: none;
+    font-size: large;
+}
+
+#company {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    opacity: 0.5;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    justify-content: space-evenly;
+}
+
+#company > li {
+    display: inline-block;
+    text-align: center;
+}
+
+#company > li > img {
+    width: 120px;
+    height: 50px;
+}
+
+#closePopUp {
+    position: fixed;
+    top: 8%;
+    left: 80%;
+}
+
+.movieDetail {
+    width: 100%;
+}
+
+.like {
+    position: absolute;
+    background-color: white;
+    opacity: 0.5;
+    text-align: center;
+    color: black;
+    width: 14.5%;
+    font-size: x-large;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.movieDetail:hover .like {
+    visibility: visible;
+    /* opacity: 1; */
+}

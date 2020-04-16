@@ -1,0 +1,22 @@
+.form {
+    display: flex;
+}
+
+.inputBox {
+    flex: '10'; 
+    padding: '5px'
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: #555555;
+    color: #fff;
+    padding: 7px 20px;
+    cursor: pointer;
+    flex: '1';
+}
+  
+.btn:hover {
+    background: #666;
+}

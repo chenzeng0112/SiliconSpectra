@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AddTodo from './AddTodo.js'
+import Todos from './Todos.js'
+
+import { v4 as uuid } from 'uuid';
+
+class App extends React.Component {
+  state = {
+    todos: []
+  };
+
+  addTodo = (id, content) => {
+    const newTodo = {
+      id: uuid(),
+      content,
+      completed: false
+    }
+    this.setState({ todos: { ...this.state.todos, newTodo } })
+  };
+
+  render() {
+    return (
+      <div>
+        <React.Fragment>
+          <AddTodo addTodo={this.addTodo} />
+          <Todos todos={this.state.todos} />
+        </React.Fragment>
+      </div>
+    )
+  };
 }
 
 export default App;

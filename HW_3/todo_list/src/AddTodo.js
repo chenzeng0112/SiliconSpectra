@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './AddTodo.css'
 
 class AddTodo extends React.Component {
@@ -6,38 +6,52 @@ class AddTodo extends React.Component {
         content: ''
     }
 
-    handleSubmit = (event) => {
+    onSubmit = (event) => {
         event.preventDefault();
         this.props.addTodo(this.state.content);
         this.setState({ content: '' });
     }
 
-    handleChange = (event) => {
+    onChange = (event) => {
         const { name, value } = event.target
-        this.setState({
-            [name]: value
-        });
-    };
+        this.setState({ [name]: value });
+    }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className="form">
+            <form onSubmit={this.onSubmit} style={formStyle}>
                 <input
-                    type='text'
-                    name='content'
-                    className='inputBox'
-                    placeholder='Add Todo here ...'
+                    type="text"
+                    name="content"
+                    style={inputStyle}
+                    placeholder="Add Todo Item ..."
                     value={this.state.content}
-                    onChange={this.handleChange}
+                    onChange={this.onChange}
                 />
                 <input
-                    type='submit'
-                    value='Submit'
-                    className='btn'
+                    type="submit"
+                    value="SUBMIT"
+                    className="btn"
+                    style={submitStyle}
                 />
             </form>
         )
-    };
+    }
+}
+
+const formStyle = {
+    display: 'flex',
+    height: '100px'
+}
+
+const inputStyle = {
+    flex: '10',
+    padding: '10px',
+    fontSize: '40px'
+}
+
+const submitStyle = {
+    flex: '1'
 }
 
 export default AddTodo

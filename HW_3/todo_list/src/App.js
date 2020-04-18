@@ -5,8 +5,6 @@ import AddTodo from './AddTodo.js'
 import Search from './Search.js'
 import ShowList from './ShowList.js'
 import TodoItem from './TodoItem.js'
-
-
 import { v4 as uuid } from 'uuid';
 
 class App extends React.Component {

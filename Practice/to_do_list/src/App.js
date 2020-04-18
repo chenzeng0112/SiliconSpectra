@@ -5,29 +5,13 @@ import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
 import About from './components/pages/About';
 import { v4 as uuid } from 'uuid';
-// mport axios from 'axios';
+// import axios from 'axios';
 
 import './App.css';
 
 class App extends Component {
   state = {
-    todos: [
-      // {
-      //   id: uuid(),
-      //   title: 'Take out the trash',
-      //   completed: false
-      // },
-      // {
-      //   id: uuid(),
-      //   title: 'Dinner with wife',
-      //   completed: true
-      // },
-      // {
-      //   id: uuid(),
-      //   title: 'Meeting with boss',
-      //   completed: false
-      // }
-    ]
+    todos: []
   }
 
   // componentDidMount() {
@@ -37,12 +21,14 @@ class App extends Component {
 
   // Toggle complete
   markComplete = (id) => {
-    this.setState({ todos: this.state.todos.map(todo => {
-      if(todo.id === id) {
-        todo.completed = !todo.completed
-      }
-      return todo;
-    }) });
+    this.setState({
+      todos: this.state.todos.map(todo => {
+        if (todo.id === id) {
+          todo.completed = !todo.completed
+        }
+        return todo;
+      })
+    });
   }
 
   // Delete Todo
@@ -78,7 +64,7 @@ class App extends Component {
               <React.Fragment>
                 <AddTodo addTodo={this.addTodo} />
                 <Todos todos={this.state.todos} markComplete={this.markComplete}
-                delTodo={this.delTodo} />
+                  delTodo={this.delTodo} />
               </React.Fragment>
             )} />
             <Route path="/about" component={About} />

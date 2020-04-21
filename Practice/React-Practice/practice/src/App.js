@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid';
 
 import Header from './Components/Header.js';
 import AddTodo from './Components/AddTodo.js';
+import TodoItem from './Components/TodoItem.js'
 
 class App extends React.Component {
   state = {
@@ -11,7 +12,7 @@ class App extends React.Component {
   };
 
   // addTodo
-  addTodo = (id, content) => {
+  addTodo = (content, id) => {
     const newTodo = {
       id: uuid(),
       content,
@@ -25,6 +26,7 @@ class App extends React.Component {
       <div>
         <Header />
         <AddTodo addTodo={this.addTodo} />
+        <TodoItem />
       </div>
     )
   }

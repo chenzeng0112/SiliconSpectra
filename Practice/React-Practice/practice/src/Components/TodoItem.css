@@ -1,0 +1,58 @@
+.todoStyle {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-bottom: 1px #ccc dotted;
+    font-size: 45px;
+}
+
+.todoItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkBox {
+    margin: 20px 80px;
+    transform: scale(2.5);
+}
+
+.bttnItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.bttnStyle {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: auto 20px;
+    margin: auto 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 35px;
+    width: 300px;
+    height: 45px;
+}
+
+.editItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputBox {
+    font-size: 40px;
+    margin: 0 100px;
+    text-align: center;
+}
+
+.bttnStyleNew {
+    background: black;
+    color: #fff;
+    border: none;
+    padding: auto 20px;
+    margin: auto 40px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 35px;
+    width: 300px;
+    height: 45px;
+}

@@ -9,7 +9,7 @@ class AddTodo extends React.Component {
     onSubmit = (event) => {
         event.preventDefault();
         this.props.addTodo(this.state.content);
-        this.setState({ content: '' })
+        this.setState({ content: '' });
     }
 
     onChange = (event) => {

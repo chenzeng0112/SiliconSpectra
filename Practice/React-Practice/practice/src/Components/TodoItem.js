@@ -4,6 +4,8 @@ import './TodoItem.css';
 class TodoItem extends React.Component {
     state = {
         content: this.props.todo.content,
+        // orderDefault: this.props.todo.orderIndex,
+        orderDefault: 1,
     }
 
     getStyle = () => {
@@ -44,6 +46,17 @@ class TodoItem extends React.Component {
         }
     }
 
+    handleSort = (event) => {
+        this.setState({ orderDefault: event.target.value });
+        console.log(event.target.value)
+    }
+
+    handleSortKeyDown = (event) => {
+        const { sortTodo, todo } = this.props
+        if (event.keyCode === 13 && this.state.orderDefault !== null) {
+            sortTodo(todo.id, this.state.orderDefault);
+        }
+    }
 
     render() {
         const { id, content, completed } = this.props.todo;
@@ -51,14 +64,27 @@ class TodoItem extends React.Component {
         return (
             <div className='todoStyle'>
                 <div style={this.withoutEditingMode()}>
-                    <div className="todoItem" style={this.getStyle()}>
+                    <div className="todoItem">
                         <input
                             type='checkbox'
                             checked={completed}
                             className='checkBox'
                             onChange={() => this.props.markComplete(id)}
+                            style={this.getStyle()}
                         />
-                        {content}
+                        <h4
+                            onClick={() => this.props.markComplete(id)}
+                            style={this.getStyle()}
+                        >
+                            {content}
+                        </h4>
+                        <input
+                            type='number'
+                            value={this.state.orderDefault}
+                            onChange={this.handleSort}
+                            onKeyDown={this.handleSortKeyDown}
+                            className='sortBox'
+                        />
                     </div>
                     <div className='bttnItem'>
                         <button className='bttnStyle' onClick={() => this.props.editTodo(id)}>EDIT</button>

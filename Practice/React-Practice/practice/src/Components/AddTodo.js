@@ -4,11 +4,12 @@ import './AddTodo.css';
 class AddTodo extends React.Component {
     state = {
         content: '',
+        initialIndex: 1,
     }
 
     onSubmit = (event) => {
         event.preventDefault();
-        this.props.addTodo(this.state.content);
+        this.props.addTodo(this.state.content, this.state.initialIndex);
         this.setState({ content: '' });
     }
 

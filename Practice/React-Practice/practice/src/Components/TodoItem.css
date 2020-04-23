@@ -11,7 +11,7 @@
 }
 
 .checkBox {
-    margin: 20px 80px;
+    margin: 28px 140px;
     transform: scale(2.5);
 }
 
@@ -55,4 +55,11 @@
     font-size: 35px;
     width: 300px;
     height: 45px;
+}
+
+.sortBox {
+    font-size: 35px;
+    margin: 15px 180px;
+    height: 40px;
+    text-align: center;
 }

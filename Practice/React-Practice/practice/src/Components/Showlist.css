@@ -1,0 +1,19 @@
+.showList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 500px;
+}
+
+.showBtn {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    width: 500px;
+    height: 65px;
+    margin: 20px 10px;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+}

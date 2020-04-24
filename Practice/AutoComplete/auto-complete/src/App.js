@@ -4,8 +4,12 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
-      <div>
-
+      <div className='inputBox'>
+        <input
+          tpye='text'
+          placeholder='AUTO COMPLETE ...'
+          className='inputText'
+        />
       </div>
     )
   }

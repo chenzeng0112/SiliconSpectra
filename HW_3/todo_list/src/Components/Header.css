@@ -1,12 +1,13 @@
-.hearderStyle {
+.headerStyle {
     background: #333;
     color: #fff;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
 .textStyle {
     font-size: 60px;
+    
 }
 
 .headerBtn {

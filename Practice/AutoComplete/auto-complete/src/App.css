@@ -1,7 +1,57 @@
 .inputBox {
-
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+  margin-bottom: 50px;
 }
 
 .inputText {
-  
+  align-self: center;
+  flex-wrap: wrap;
+  height: 10vh;
+  width: 55%;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 50px;
+  cursor: pointer;
+  box-shadow: 5px 10px #888888;
+  background-color: rgb(228, 234, 240);
 }
+
+.inputText:focus {
+  height: 9.6vh;
+  width: 40%;
+  outline: none;
+  border: 5px solid lightskyblue;
+  border-radius: 20px;
+}
+
+ul.output {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 38%;
+}
+
+ul.output li{
+  display: flex;
+  flex-direction: row;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0px;
+  width:100%;
+  border-radius: 10px;
+  background-color: lightcyan;
+  height: auto; 
+  padding: 10px 40px;
+}
+
+ul.output li:hover {
+  font-weight: bold;
+  color: lightcoral;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+

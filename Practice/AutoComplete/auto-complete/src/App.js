@@ -10,7 +10,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/comments')
+    axios.get('https://jsonplaceholder.typicode.com/users')
       .then(res => this.setState({ suggestions: res.data }));
   }
 
@@ -24,7 +24,6 @@ class App extends React.Component {
   handleClick = (event) => {
     this.setState({
       showResult: false,
-      // suggestions: [],
       searchText: event.target.innerText,
     })
   }

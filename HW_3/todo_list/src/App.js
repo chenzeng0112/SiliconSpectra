@@ -11,8 +11,12 @@ class App extends React.Component {
   }
 
   // addTodo
-  addTodo = () => {
-
+  addTodo = (content) => {
+    const newTodo = {
+      id: uuid(),
+      content,
+    }
+    this.setState({ todos: [...this.state.todos, newTodo] });
   }
 
   render() {
@@ -20,6 +24,7 @@ class App extends React.Component {
       <div>
         <React.Fragment>
           <Header />
+          <AddTodo addTodo={this.addTodo} />
         </React.Fragment>
       </div>
     )

@@ -1,0 +1,15 @@
+.slideArrow {
+    color: black;
+    cursor: pointer;
+    font-size: 2rem;
+    position: fixed;
+    top: 40%;
+}
+
+.slideArrow.left {
+    left: 1rem;
+}
+
+.slideArrow.right {
+    right: 1rem;
+}

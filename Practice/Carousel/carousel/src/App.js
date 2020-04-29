@@ -46,11 +46,21 @@ class App extends React.Component {
     return <img src={tempUrl} alt={tempTitle} className='image' />;
   }
 
+  searchImg = (e) => {
+    if (e.keyCode === 13) {
+      if (e.target.value > 0 && e.target.value <= this.state.photos.length) {
+        this.setState({ index: Number(e.target.value) });
+      } else {
+        alert(`Search Between 1 to ${this.state.photos.length}`);
+      }
+    }
+  }
+
   render() {
     return (
       <div className='carousel'>
         <Arrow direction='left' handleClick={this.prevSlide} glyph='&#9664;' />
-        <ImgSlide showSlide={this.showSlide} />
+        <ImgSlide showSlide={this.showSlide} searchImg={this.searchImg} />
         <Arrow direction='right' handleClick={this.nextSlide} glyph='&#9654;' />
       </div>
     )

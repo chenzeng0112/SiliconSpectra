@@ -48,7 +48,7 @@ class TodoItem extends React.Component {
 
     handleSort = (event) => {
         this.setState({ orderDefault: event.target.value });
-        console.log(event.target.value)
+        // console.log(event.target.value)
     }
 
     handleSortKeyDown = (event) => {

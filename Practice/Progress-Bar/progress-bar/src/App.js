@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import ProgressBar from './Components/ProgressBar'
 
-export default App;
+export default class App extends Component {
+  state = {
+    percentage: 0,
+  }
+
+  percentageLimits = (min, value, max) => {
+    return Math.min(Math.max(min, value), max);
+  }
+
+  handleIncrease = () => {
+    this.setState({ percentage: this.percentageLimits(0, this.state.percentage + 10, 100) })
+  }
+
+  handleDecrease = () => {
+    this.setState({ percentage: this.percentageLimits(0, this.state.percentage - 10, 100) })
+  }
+
+  render() {
+    return (
+      <div className='appWrapper'>
+        <div className='container'>
+          <div className='button'>
+            <button onClick={this.handleDecrease}>-</button>
+            <button onClick={this.handleIncrease}>+</button>
+          </div>
+          <ProgressBar percentage={this.state.percentage} />
+        </div>
+      </div>
+    )
+  }
+}
